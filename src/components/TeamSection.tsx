@@ -1,24 +1,89 @@
+"use client";
+import { FaLinkedin, FaTwitter, FaEnvelope } from "react-icons/fa";
+
+const teamMembers = [
+  {
+    name: "Ahmet Yılmaz",
+    title: "CEO & Kurucu",
+    bio: "10+ yıl yazılım geliştirme ve proje yönetimi deneyimi ile şirketimizin vizyonunu şekillendiriyor.",
+    photo: "/team1.jpg",
+    social: {
+      linkedin: "https://linkedin.com",
+      twitter: "https://twitter.com",
+      email: "mailto:ahmet@sirket.com"
+    }
+  },
+  {
+    name: "Elif Demir",
+    title: "UI/UX Designer",
+    bio: "Kullanıcı odaklı tasarım anlayışıyla modern ve etkileyici arayüzler oluşturuyor.",
+    photo: "/team2.jpg",
+    social: {
+      linkedin: "https://linkedin.com",
+      twitter: "https://twitter.com",
+      email: "mailto:elif@sirket.com"
+    }
+  },
+  {
+    name: "Mehmet Kaya",
+    title: "Frontend Developer",
+    bio: "En güncel teknolojilerle performanslı ve erişilebilir web uygulamaları geliştiriyor.",
+    photo: "/team3.jpg",
+    social: {
+      linkedin: "https://linkedin.com",
+      twitter: "https://twitter.com",
+      email: "mailto:mehmet@sirket.com"
+    }
+  },
+  {
+    name: "Zeynep Aksoy",
+    title: "SEO Specialist",
+    bio: "Arama motorlarında üst sıralara çıkmanız için stratejik çözümler üretiyor.",
+    photo: "/team4.jpg",
+    social: {
+      linkedin: "https://linkedin.com",
+      twitter: "https://twitter.com",
+      email: "mailto:zeynep@sirket.com"
+    }
+  }
+];
+
 export default function TeamSection() {
   return (
-    <section className="mt-8">
-      <h2 className="text-2xl font-semibold mb-4">Ekibimiz</h2>
-      <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-        <div className="bg-white p-4 rounded shadow">
-          <h3 className="font-bold text-lg mb-1 text-gray-900">Ahmet Yılmaz</h3>
-          <p className="text-gray-700">Full Stack Developer</p>
-        </div>
-        <div className="bg-white p-4 rounded shadow">
-          <h3 className="font-bold text-lg mb-1 text-gray-900">Elif Demir</h3>
-          <p className="text-gray-700">UI/UX Designer</p>
-        </div>
-        <div className="bg-white p-4 rounded shadow">
-          <h3 className="font-bold text-lg mb-1 text-gray-900">Mehmet Kaya</h3>
-          <p className="text-gray-700">Frontend Developer</p>
-        </div>
-        <div className="bg-white p-4 rounded shadow">
-          <h3 className="font-bold text-lg mb-1 text-gray-900">Zeynep Aksoy</h3>
-          <p className="text-gray-700">SEO Specialist</p>
-        </div>
+    <section className="w-full">
+      <div className="text-center mb-12">
+        <h2 className="text-3xl font-bold mb-2 text-gray-900">Uzman Ekibimiz</h2>
+        <p className="text-xl text-gray-600 max-w-3xl mx-auto">Deneyimli ekibimiz ile dijital dünyada fark yaratıyoruz</p>
+      </div>
+      
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        {teamMembers.map((member, index) => (
+          <div key={index} className="bg-white rounded-xl shadow-lg overflow-hidden transform transition-all hover:scale-105 hover:shadow-xl">
+            <div className="h-64 bg-gradient-to-br from-blue-50 to-indigo-100 flex items-center justify-center">
+              <div className="w-32 h-32 rounded-full bg-blue-100 border-4 border-white shadow-md flex items-center justify-center text-3xl font-bold text-blue-600">
+                {member.name.split(' ').map(n => n[0]).join('')}
+              </div>
+            </div>
+            
+            <div className="p-6">
+              <h3 className="text-xl font-bold text-gray-900">{member.name}</h3>
+              <p className="text-blue-600 font-medium mb-2">{member.title}</p>
+              <p className="text-gray-600 text-sm mb-4">{member.bio}</p>
+              
+              <div className="flex justify-center gap-3 pt-2 border-t">
+                <a href={member.social.linkedin} className="text-gray-500 hover:text-blue-600 transition-colors" aria-label="LinkedIn">
+                  <FaLinkedin size={18} />
+                </a>
+                <a href={member.social.twitter} className="text-gray-500 hover:text-blue-400 transition-colors" aria-label="Twitter">
+                  <FaTwitter size={18} />
+                </a>
+                <a href={member.social.email} className="text-gray-500 hover:text-red-500 transition-colors" aria-label="Email">
+                  <FaEnvelope size={18} />
+                </a>
+              </div>
+            </div>
+          </div>
+        ))}
       </div>
     </section>
   );
