@@ -158,10 +158,18 @@ export default function Home() {
       <section className="w-full max-w-6xl mx-auto mb-16 animate-fade-in-up">
         <h2 className="text-3xl font-bold text-center mb-8">Referanslarımız</h2>
         <div className="grid grid-cols-2 md:grid-cols-4 gap-6 items-center">
-          <img src="/ref1.png" alt="Referans 1" className="h-16 object-contain mx-auto grayscale hover:grayscale-0 transition" />
-          <img src="/ref2.png" alt="Referans 2" className="h-16 object-contain mx-auto grayscale hover:grayscale-0 transition" />
-          <img src="/ref3.png" alt="Referans 3" className="h-16 object-contain mx-auto grayscale hover:grayscale-0 transition" />
-          <img src="/ref4.png" alt="Referans 4" className="h-16 object-contain mx-auto grayscale hover:grayscale-0 transition" />
+          <div className="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-all">
+            <Image src="/ref1.png" alt="Referans 1" width={200} height={100} className="w-full h-auto" />
+          </div>
+          <div className="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-all">
+            <Image src="/ref2.png" alt="Referans 2" width={200} height={100} className="w-full h-auto" />
+          </div>
+          <div className="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-all">
+            <Image src="/ref3.png" alt="Referans 3" width={200} height={100} className="w-full h-auto" />
+          </div>
+          <div className="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-all">
+            <Image src="/ref4.png" alt="Referans 4" width={200} height={100} className="w-full h-auto" />
+          </div>
         </div>
       </section>
 
