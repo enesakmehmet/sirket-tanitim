@@ -1,5 +1,6 @@
 "use client";
 import { FaLinkedin, FaTwitter, FaEnvelope } from "react-icons/fa";
+import Image from "next/image";
 
 const teamMembers = [
   {
@@ -59,10 +60,14 @@ export default function TeamSection() {
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
         {teamMembers.map((member, index) => (
           <div key={index} className="bg-white rounded-xl shadow-lg overflow-hidden transform transition-all hover:scale-105 hover:shadow-xl">
-            <div className="h-64 bg-gradient-to-br from-blue-50 to-indigo-100 flex items-center justify-center">
-              <div className="w-32 h-32 rounded-full bg-blue-100 border-4 border-white shadow-md flex items-center justify-center text-3xl font-bold text-blue-600">
-                {member.name.split(' ').map(n => n[0]).join('')}
-              </div>
+            <div className="h-64 bg-gradient-to-br from-blue-50 to-indigo-100 flex items-center justify-center relative overflow-hidden">
+              <Image 
+                src={member.photo}
+                alt={member.name}
+                width={256}
+                height={256}
+                className="object-cover w-full h-full"
+              />
             </div>
             
             <div className="p-6">
