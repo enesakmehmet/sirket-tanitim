@@ -1,7 +1,7 @@
 import TeamSection from "@/components/TeamSection";
 import Image from "next/image";
 import Link from "next/link";
-import { FaCheck, FaStar, FaChartLine, FaLaptopCode, FaShoppingCart, FaSearch } from "react-icons/fa";
+import { FaCheck, FaStar, FaLaptopCode, FaShoppingCart, FaSearch } from "react-icons/fa";
 
 export default function Home() {
   return (
@@ -32,12 +32,12 @@ export default function Home() {
             <div className="bg-white rounded-lg shadow-lg p-4 flex flex-col items-center text-center transform transition-all hover:scale-105">
               <span className="text-blue-600 text-3xl font-extrabold mb-1">7/24</span>
               <span className="text-sm font-semibold mb-1">Destek</span>
-              <span className="text-xs text-gray-500">Her zaman ulaşılabilir teknik destek</span>
+              <p className="text-sm text-gray-500">&quot;Çalışmalarımızdan çok memnun kaldık. Profesyonel ekip ve kaliteli hizmet.&quot;</p>
             </div>
             <div className="bg-white rounded-lg shadow-lg p-4 flex flex-col items-center text-center transform transition-all hover:scale-105">
               <span className="text-blue-600 text-3xl font-extrabold mb-1">100+</span>
               <span className="text-sm font-semibold mb-1">Başarılı Proje</span>
-              <span className="text-xs text-gray-500">Farklı sektörlerde tamamlanan projeler</span>
+              <p className="text-sm text-gray-500">&quot;E-ticaret sitemizin dönüşüm oranları arttı. Teşekkürler!&quot;</p>
             </div>
           </div>
         </div>
