@@ -3,6 +3,7 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import FloatingCTA from "@/components/FloatingCTA";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -28,6 +29,7 @@ export default function RootLayout({
         <main className="flex-1 w-full flex flex-col items-center justify-start bg-transparent">
           {children}
         </main>
+        <FloatingCTA />
         <Footer />
       </body>
     </html>

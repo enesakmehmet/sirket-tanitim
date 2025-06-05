@@ -1,4 +1,5 @@
 import TeamSection from "@/components/TeamSection";
+import StatsCounter from "@/components/StatsCounter";
 import Image from "next/image";
 import Link from "next/link";
 import { FaCheck, FaStar, FaLaptopCode, FaShoppingCart, FaSearch } from "react-icons/fa";
@@ -332,6 +333,7 @@ export default function Home() {
       {/* EKİBİMİZ */}
       <section className="w-full max-w-4xl mx-auto mb-16 animate-fade-in">
         <TeamSection />
+<StatsCounter />
       </section>
 
       {/* BLOG ÖNE ÇIKANLAR */}
