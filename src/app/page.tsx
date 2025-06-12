@@ -1,5 +1,6 @@
 import TeamSection from "@/components/TeamSection";
 import StatsCounter from "@/components/StatsCounter";
+import TestimonialCarousel from "@/components/TestimonialCarousel";
 import Image from "next/image";
 import Link from "next/link";
 import { FaCheck, FaStar, FaLaptopCode, FaShoppingCart, FaSearch } from "react-icons/fa";
@@ -176,68 +177,13 @@ export default function Home() {
       </section>
 
       {/* MÜŞTERİ YORUMLARI */}
-      <section className="w-full max-w-5xl mx-auto mb-20 animate-fade-in">
+      <section className="w-full max-w-5xl mx-auto mb-20 animate-fade-in px-4">
         <div className="text-center mb-10">
           <h2 className="text-3xl font-bold mb-2">Müşteri Yorumları</h2>
-          <p className="text-gray-600 max-w-3xl mx-auto">Müşterilerimizin memnuniyeti başarımızın temelidir</p>
+          <p className="text-gray-600 dark:text-gray-400 max-w-3xl mx-auto">Müşterilerimizin memnuniyeti başarımızın temelidir</p>
         </div>
         
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          <div className="bg-white p-8 rounded-2xl shadow-lg relative">
-            <div className="absolute -top-4 -left-4 w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center z-10">
-              <svg className="w-6 h-6 text-blue-600" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                <path d="M10.394 2.08a1 1 0 00-.788 0l-7 3a1 1 0 000 1.84L5.25 8.051a.999.999 0 01.356-.257l4-1.714a1 1 0 11.788 1.838L7.667 9.088l1.94.831a1 1 0 00.787 0l7-3a1 1 0 000-1.838l-7-3zM3.31 9.397L5 10.12v4.102a8.969 8.969 0 00-1.05-.174 1 1 0 01-.89-.89 11.115 11.115 0 01.25-3.762zM9.3 16.573A9.026 9.026 0 007 14.935v-3.957l1.818.78a3 3 0 002.364 0l5.508-2.361a11.026 11.026 0 01.25 3.762 1 1 0 01-.89.89 8.968 8.968 0 00-5.35 2.524 1 1 0 01-1.4 0zM6 18a1 1 0 001-1v-2.065a8.935 8.935 0 00-2-.712V17a1 1 0 001 1z" />
-              </svg>
-            </div>
-            <div className="flex flex-col">
-              <div className="flex items-center mb-4">
-                <div className="h-12 w-12 rounded-full bg-blue-100 flex items-center justify-center text-blue-600 font-bold text-xl mr-4">
-                  AK
-                </div>
-                <div>
-                  <h4 className="font-bold text-lg">Ayşe Kaya</h4>
-                  <p className="text-gray-500 text-sm">ABC Holding CEO</p>
-                </div>
-              </div>
-              <div className="mb-3 flex">
-                {[...Array(5)].map((_, i) => (
-                  <svg key={i} className="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                  </svg>
-                ))}
-              </div>
-              <p className="italic text-gray-700">"Hızlı teslimat ve harika iletişim. Web sitemiz beklentimizin çok üzerinde oldu! Modern tasarım ve kullanım kolaylığı sayesinde web sitemize gelen ziyaretçi sayısı %60 arttı."</p>
-            </div>
-          </div>
-          
-          <div className="bg-white p-8 rounded-2xl shadow-lg relative">
-            <div className="absolute -top-4 -left-4 w-10 h-10 bg-yellow-100 rounded-full flex items-center justify-center z-10">
-              <svg className="w-6 h-6 text-yellow-600" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                <path fillRule="evenodd" d="M6.625 2.655A9 9 0 0119 11a1 1 0 11-2 0 7 7 0 00-9.625-6.492 1 1 0 11-.75-1.853zM4.662 4.959A1 1 0 014.75 6.37 6.97 6.97 0 003 11a1 1 0 11-2 0 8.97 8.97 0 012.25-5.953 1 1 0 011.412-.088z" clipRule="evenodd" />
-                <path fillRule="evenodd" d="M5 11a5 5 0 1110 0 1 1 0 11-2 0 3 3 0 10-6 0c0 1.677-.345 3.276-.968 4.729a1 1 0 11-1.838-.789A9.964 9.964 0 005 11z" clipRule="evenodd" />
-              </svg>
-            </div>
-            <div className="flex flex-col">
-              <div className="flex items-center mb-4">
-                <div className="h-12 w-12 rounded-full bg-yellow-100 flex items-center justify-center text-yellow-600 font-bold text-xl mr-4">
-                  CY
-                </div>
-                <div>
-                  <h4 className="font-bold text-lg">Cem Yılmaz</h4>
-                  <p className="text-gray-500 text-sm">XYZ E-Ticaret Müdürü</p>
-                </div>
-              </div>
-              <div className="mb-3 flex">
-                {[...Array(5)].map((_, i) => (
-                  <svg key={i} className="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                  </svg>
-                ))}
-              </div>
-              <p className="italic text-gray-700">"SEO çalışmaları sayesinde Google'da üst sıralara çıktık ve satışlarımız %120 arttı! Ayrıca düzenli raporlamalar sayesinde stratejimizi sürekli iyileştirebildik. Destek ekibi her zaman yanımızda oldu."</p>
-            </div>
-          </div>
-        </div>
+        <TestimonialCarousel />
       </section>
 
       {/* GALERİ */}
@@ -333,7 +279,7 @@ export default function Home() {
       {/* EKİBİMİZ */}
       <section className="w-full max-w-4xl mx-auto mb-16 animate-fade-in">
         <TeamSection />
-<StatsCounter />
+        <StatsCounter />
       </section>
 
       {/* BLOG ÖNE ÇIKANLAR */}

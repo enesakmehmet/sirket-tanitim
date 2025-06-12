@@ -21,9 +21,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="tr">
+    <html lang="tr" className="scroll-smooth">
       <body
-        className={`${inter.variable} antialiased bg-gradient-to-br from-slate-50 via-white to-blue-50 min-h-screen flex flex-col w-full`}
+        className={`${inter.variable} antialiased bg-gradient-to-br from-slate-50 via-white to-blue-50 dark:from-gray-950 dark:via-gray-900 dark:to-blue-950 min-h-screen flex flex-col w-full dark:text-gray-200`}
       >
         <Header />
         <main className="flex-1 w-full flex flex-col items-center justify-start bg-transparent">
