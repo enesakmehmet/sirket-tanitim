@@ -15,3 +15,6 @@ Bu proje, modern bir işletmenin dijital varlığını en profesyonel şekilde y
 - **Styling:** Tailwind CSS 4
 - **Language:** TypeScript
 - **Deployment:** Netlify / Vercel Ready
+
+
+///////////////
