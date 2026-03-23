@@ -17,4 +17,4 @@ Bu proje, modern bir işletmenin dijital varlığını en profesyonel şekilde y
 - **Deployment:** Netlify / Vercel Ready
 
 
-/////
+//////////////////
